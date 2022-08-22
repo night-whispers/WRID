@@ -7,11 +7,22 @@
 
 import SwiftUI
 
+let signInConfig = GIDConfiguration(clientID: "293486480223-bmiskmamortuaeoo83mkfg8fuh7crelf.apps.googleusercontent.com")
+
 @main
-struct WRIDApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+struct WRID: App {
+    
+  var body: some Scene {
+      
+    WindowGroup {
+      ContentView()
+        // ...
+        .onAppear {
+          GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            // Check if `user` exists; otherwise, do something with `error`
+          }
         }
     }
+  }
 }
+
