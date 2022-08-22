@@ -6,23 +6,28 @@
 //
 
 import SwiftUI
-
-let signInConfig = GIDConfiguration(clientID: "293486480223-bmiskmamortuaeoo83mkfg8fuh7crelf.apps.googleusercontent.com")
+import FirebaseCore
+import Firebase
+import GoogleSignIn
 
 @main
-struct WRID: App {
-    
-  var body: some Scene {
-      
-    WindowGroup {
-      ContentView()
-        // ...
-        .onAppear {
-          GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            // Check if `user` exists; otherwise, do something with `error`
-          }
+struct WRIDApp: App {
+    @StateObject var viewModel = AuthenticationViewModel()
+
+    init() {
+        setupAuthentication()
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
-  }
 }
 
+extension WRIDApp {
+    private func setupAuthentication() {
+        FirebaseApp.configure()
+    }
+}

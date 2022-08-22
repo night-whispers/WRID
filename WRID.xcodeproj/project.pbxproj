@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283267D528B43C3600B456CA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 283267D428B43C3600B456CA /* FirebaseAuth */; };
+		283267D828B43C8100B456CA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 283267D728B43C8100B456CA /* GoogleSignIn */; };
+		283267DA28B43C8100B456CA /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 283267D928B43C8100B456CA /* GoogleSignInSwift */; };
+		2843637828B43F8D00629E14 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843637728B43F8D00629E14 /* AuthenticationViewModel.swift */; };
+		2843637A28B446AF00629E14 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843637928B446AF00629E14 /* GoogleSignInButton.swift */; };
+		2843637C28B448AE00629E14 /* PreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843637B28B448AE00629E14 /* PreView.swift */; };
+		2843637E28B44BB800629E14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843637D28B44BB800629E14 /* HomeView.swift */; };
 		288870BB28B426B6008B3421 /* WRIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288870BA28B426B6008B3421 /* WRIDApp.swift */; };
 		288870BD28B426B6008B3421 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288870BC28B426B6008B3421 /* ContentView.swift */; };
 		288870BF28B426BC008B3421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288870BE28B426BC008B3421 /* Assets.xcassets */; };
@@ -17,6 +24,10 @@
 /* Begin PBXFileReference section */
 		1C350A62CB60292B4A23387E /* Pods-WRID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRID.release.xcconfig"; path = "Target Support Files/Pods-WRID/Pods-WRID.release.xcconfig"; sourceTree = "<group>"; };
 		283267D228B437D000B456CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2843637728B43F8D00629E14 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		2843637928B446AF00629E14 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		2843637B28B448AE00629E14 /* PreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreView.swift; sourceTree = "<group>"; };
+		2843637D28B44BB800629E14 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		288870B728B426B6008B3421 /* WRID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288870BA28B426B6008B3421 /* WRIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRIDApp.swift; sourceTree = "<group>"; };
 		288870BC28B426B6008B3421 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +43,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F304129879D768FD0BA35BE9 /* Pods_WRID.framework in Frameworks */,
+				283267D528B43C3600B456CA /* FirebaseAuth in Frameworks */,
+				283267D828B43C8100B456CA /* GoogleSignIn in Frameworks */,
+				283267DA28B43C8100B456CA /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +75,11 @@
 			children = (
 				283267D228B437D000B456CA /* Info.plist */,
 				288870BA28B426B6008B3421 /* WRIDApp.swift */,
+				2843637D28B44BB800629E14 /* HomeView.swift */,
+				2843637728B43F8D00629E14 /* AuthenticationViewModel.swift */,
 				288870BC28B426B6008B3421 /* ContentView.swift */,
+				2843637928B446AF00629E14 /* GoogleSignInButton.swift */,
+				2843637B28B448AE00629E14 /* PreView.swift */,
 				288870BE28B426BC008B3421 /* Assets.xcassets */,
 				288870C028B426BC008B3421 /* Preview Content */,
 			);
@@ -111,6 +129,11 @@
 			dependencies = (
 			);
 			name = WRID;
+			packageProductDependencies = (
+				283267D428B43C3600B456CA /* FirebaseAuth */,
+				283267D728B43C8100B456CA /* GoogleSignIn */,
+				283267D928B43C8100B456CA /* GoogleSignInSwift */,
+			);
 			productName = WRID;
 			productReference = 288870B728B426B6008B3421 /* WRID.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +162,10 @@
 				Base,
 			);
 			mainGroup = 288870AE28B426B6008B3421;
+			packageReferences = (
+				283267D328B43C3600B456CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				283267D628B43C8100B456CA /* XCRemoteSwiftPackageReference "GoogleSignIn-ios" */,
+			);
 			productRefGroup = 288870B828B426B6008B3421 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,6 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2843637A28B446AF00629E14 /* GoogleSignInButton.swift in Sources */,
+				2843637C28B448AE00629E14 /* PreView.swift in Sources */,
+				2843637828B43F8D00629E14 /* AuthenticationViewModel.swift in Sources */,
+				2843637E28B44BB800629E14 /* HomeView.swift in Sources */,
 				288870BD28B426B6008B3421 /* ContentView.swift in Sources */,
 				288870BB28B426B6008B3421 /* WRIDApp.swift in Sources */,
 			);
@@ -413,6 +444,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		283267D328B43C3600B456CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		283267D628B43C8100B456CA /* XCRemoteSwiftPackageReference "GoogleSignIn-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		283267D428B43C3600B456CA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 283267D328B43C3600B456CA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		283267D728B43C8100B456CA /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 283267D628B43C8100B456CA /* XCRemoteSwiftPackageReference "GoogleSignIn-ios" */;
+			productName = GoogleSignIn;
+		};
+		283267D928B43C8100B456CA /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 283267D628B43C8100B456CA /* XCRemoteSwiftPackageReference "GoogleSignIn-ios" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 288870AF28B426B6008B3421 /* Project object */;
 }
