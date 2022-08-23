@@ -17,7 +17,7 @@ struct PreView: View {
             Spacer()
             
             // 2
-            Image("WEST-RANCH-LOGO")
+            Image("WR LOGO")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
@@ -27,7 +27,7 @@ struct PreView: View {
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
             
-            Text("Get your West Ranch ID on your Apple Wallet now.")
+            Text("Get your West Ranch ID on your \n Apple Wallet now.")
                 .fontWeight(.light)
                 .multilineTextAlignment(.center)
                 .padding()

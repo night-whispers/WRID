@@ -9,7 +9,6 @@ import SwiftUI
 import FirebaseCore
 import Firebase
 import GoogleSignIn
-
 @main
 struct WRIDApp: App {
     @StateObject var viewModel = AuthenticationViewModel()

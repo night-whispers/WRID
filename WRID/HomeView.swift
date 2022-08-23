@@ -30,7 +30,7 @@ struct HomeView: View {
                             .font(.headline)
                         
                         Text(user?.profile?.email ?? "")
-                            .font(.subheadline)
+                            .font(.caption)
                     }
                     Spacer()
                 }
